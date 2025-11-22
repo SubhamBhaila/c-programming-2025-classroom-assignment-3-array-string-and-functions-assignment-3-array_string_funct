@@ -1,7 +1,4 @@
 // Write a C program to find the maximum and minimum elements in an array.
-Here’s the program **without comments**:
-
-```c
 #include <stdio.h>
 
 int main() {
