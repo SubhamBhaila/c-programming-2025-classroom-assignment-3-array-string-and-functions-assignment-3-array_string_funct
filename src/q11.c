@@ -1,28 +1,24 @@
-// Write a function named calculateAverage that takes an array of integers as input and returns the average of the numbers.
 #include <stdio.h>
 
-float calculateAverage(int arr[], int n) {
+double calculateAverage(int arr[], int size) {
     int i;
-    int sum = 0;
+    long sum = 0;
 
-    for (i = 0; i < n; i++) {
+    for (i = 0; i < size; i++) {
         sum += arr[i];
     }
 
-    return (float)sum / n;
+    if (size == 0) {
+        return 0.0;
+    }
+
+    return (double)sum / size;
 }
 
 int main() {
-    int n, i;
-
-    printf("Enter number of elements: ");
-    scanf("%d", &n);
-
-    int arr[n];
-
-    printf("Enter %d integers:\n", n);
-    for (i = 0; i < n; i++) {
-        scanf("%d", &arr[i]);
-    }
-
-    printf("Average
+    int numbers[] = {10, 20, 30, 40, 50};
+    int n = 5;
+    double avg = calculateAverage(numbers, n);
+    printf("Average = %.2f\n", avg);
+    return 0;
+}
